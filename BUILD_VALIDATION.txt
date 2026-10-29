@@ -1,0 +1,12 @@
+DutySphere skills-management update validation
+
+- Java source compilation: SUCCESS (javac --release 17, Servlet API 4.0.1, MySQL Connector/J 9.4.0).
+- WAR packaging: SUCCESS (build/dutyshpere.war created).
+- Added admin-only Skills Catalogue servlet and JSP.
+- Added skill-to-department mapping table and non-destructive startup backfill.
+- Staff and duty forms filter skills by selected department.
+- Staff and duty POST handlers validate department-skill mappings server-side.
+- Skill mappings used by existing staff/duties cannot be removed until usage is resolved.
+- Deleting a skill currently used by staff or duties is blocked.
+- Database-backed integration tests and Tomcat/JSP runtime tests have NOT been run in this environment; run the documented end-to-end scenario on the target MySQL/Tomcat installation before the final demo.
+- Maven is not installed in this build environment. The Java compile and WAR assembly steps equivalent to build.bat were executed directly.
